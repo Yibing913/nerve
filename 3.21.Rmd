@@ -10,7 +10,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
-# Load necessary libraries
 library(ggplot2)
 library(reshape2)
 
@@ -23,13 +22,13 @@ max_val <- max(combined_data$value)
 mean_val <- mean(combined_data$value)
 sd_val <- sd(combined_data$value)
 
-report <- data.frame(
+nerve_final <- data.frame(
   Statistic = c("Minimum", "Q1 (25th percentile)", "Median (50th percentile)", 
                 "Q3 (75th percentile)", "Maximum", "Mean", "Standard Deviation"),
   Value = c(min_val, quartiles[1], quartiles[2], quartiles[3], max_val, mean_val, sd_val)
 )
 
-print(report)
+print(nerve_final)
 
 ```
 
